@@ -108,8 +108,8 @@ def searchContacts(): # begin function searchContacts.
                 f"{tc.B}┌──────────────┐\n"\
                 f"│{tc.G}Contact Found.{tc.B}│\n"\
                 f"└──────────────┘{tc.x}\n"\
-                f"{tc.B}Name{tc.x}: {contact["name"]} \n{tc.Y}Birthday{tc.x}: {contact["birthday"]}"\
-                f"\n{tc.R}Address{tc.x}: {contact["address"]} \n{tc.G}Phone{tc.x}: {contact["phone"]}\n")
+                f"{tc.B} Name{tc.x}: {contact["name"]} \n{tc.Y} Birthday{tc.x}: {contact["birthday"]}"\
+                f"\n{tc.R} Address{tc.x}: {contact["address"]} \n{tc.G} Phone{tc.x}: {contact["phone"]}\n")
 
             contactFound = True
             continue
