@@ -62,14 +62,14 @@ def saveContact(): # begin function saveContact.
 def addContact(): # begin function addContact.
     
     clearConsole()
-    print(f"\
-{tc.B}┌────────────────────────────────────────────────┐\n\
-│{tc.G}Enter information as requested to add a contact.{tc.B}│\n\
-└────────────────────────────────────────────────┘{tc.x}\n")
+    print(f""\
+        f"{tc.B}┌────────────────────────────────────────────────┐\n"\
+        f"│{tc.G}Enter information as requested to add a contact.{tc.B}│\n"\
+        f"└────────────────────────────────────────────────┘{tc.x}\n")
     name = input(f"Enter {tc.B}full name{tc.x}: ") # These ask for inputs to enter into the list.
-    birthday = input(f"Enter {tc.Y}birthday{tc.x} in ISO 8601 format [<YYYY-MM-DD>]: ")
+    birthday = input(f"Enter {tc.Y}birthday{tc.x} in ISO 8601 format (e.g. {tc.Y}1999{tc.x}-{tc.G}01{tc.x}-{tc.R}30{tc.x}): ")
     address = input(f"Enter {tc.R}address{tc.x}: ")
-    phone = input(f"Enter {tc.G}phone{tc.x} in E.164 format +[country code][local number] (country code for US is 1): ")
+    phone = input(f"Enter {tc.G}phone{tc.x} in E.164 format (e.g. {tc.Y}+1{tc.G}415{tc.R}5552671{tc.x}): ")
 
     contact = { # here is the list.
         "name": name, # the string is the key, the variable is the value of the key. (key-value pair)
@@ -104,13 +104,13 @@ def searchContacts(): # begin function searchContacts.
 
         if searchValue.lower() in contact[category].lower(): # if the information stored in the searched category is the same as one of the contacts, print the contact and break the loop.
             # The .lower() method on both sides makes the search case-insensitive, which is convenient.
-            print(f"\
-{tc.B}┌──────────────┐\n\
-│{tc.G}Contact Found.{tc.B}│\n\
-└──────────────┘{tc.x}\n\
-{tc.B}Name{tc.x}: {contact["name"]} \n{tc.Y}Birthday{tc.x}: {contact["birthday"]}\
- \n{tc.R}Address{tc.x}: {contact["address"]} \n{tc.G}Phone{tc.x}: {contact["phone"]}\n")
-            
+            print(f""\
+                f"{tc.B}┌──────────────┐\n"\
+                f"│{tc.G}Contact Found.{tc.B}│\n"\
+                f"└──────────────┘{tc.x}\n"\
+                f"{tc.B}Name{tc.x}: {contact["name"]} \n{tc.Y}Birthday{tc.x}: {contact["birthday"]}"\
+                f"\n{tc.R}Address{tc.x}: {contact["address"]} \n{tc.G}Phone{tc.x}: {contact["phone"]}\n")
+
             contactFound = True
             continue
 
