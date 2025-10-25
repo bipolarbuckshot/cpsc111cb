@@ -26,7 +26,7 @@ while True:
     average_score = 0
 
 # get test scores from the user
-    while test_score != 999:
+    while test_score != 'end':
         try:
             test_score = input("Enter test score: ")
             if int(test_score) >= 0 and int(test_score) <= 100:
@@ -37,10 +37,6 @@ while True:
             else:
                 print(f"Test score must be from 0 through 100. "
                     f"Score discarded. Try again.")
-
-        except ZeroDivisionError:
-            print("No scores were entered.")
-            break
         except ValueError:
             if test_score == 'end':
                 break
